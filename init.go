@@ -13,6 +13,9 @@ var (
 )
 
 func InitLocal() {
+	if defaultApiTools != nil {
+		_ = defaultApiTools.Error()
+	}
 	defaultApiTools = NewApiTools(DefaultLocalClientGet)
 }
 
