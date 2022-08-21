@@ -6,6 +6,11 @@ import (
 	"io"
 )
 
+// WithClient 伴随客户端
+func WithClient(fn withClientFn) *ApiTools {
+	return defaultApiTools.WithClient(fn)
+}
+
 // ImagePull 通过 imagePullName 拉取镜像
 func ImagePull(imageName string) *ApiTools {
 	return defaultApiTools.ImagePull(imageName)

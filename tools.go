@@ -67,6 +67,7 @@ func NewApiTools(clientGet ClientGet) *ApiTools {
 	}
 }
 
+// WithClient 伴随客户端
 func (a *ApiTools) WithClient(fn withClientFn) *ApiTools {
 	if a.err != nil {
 		return a
